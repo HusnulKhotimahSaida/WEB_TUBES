@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKSyari Trip - Mengapa Memilih Kami?</title>
+    <style>
+        
+
+    .slider-container {
+        position: relative; 
+        overflow: hidden; 
+        height: 250px; 
+    }
+    .slide {
+    
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        opacity: 1; 
+        top: 0;
+        padding-right: 50px; 
+    }
+
+  
+    .slide-item {
+        transition: transform 1.6s ease-out, opacity 1.6s ease-out; 
+        opacity: 0; 
+        position: relative;
+    }
+
+
+    .slide-top {
+        transform: translateY(-20px); 
+    }
+
+   
+    .slide-bottom {
+        transform: translateY(20px);
+    }
+
+  
+    .slide.active .slide-top {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .slide.active .slide-bottom {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.2s; 
+    }
+
+
+    
+        .image-slide {
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            top: 0;
+            left: 0;
+        }
+    .image-slide.active {
+        opacity: 1;
+    }
+
+ 
+    .nav-button {
+        position: absolute;
+        right: 0px; 
+        font-size: 1.5em; 
+        cursor: pointer;
+        background: transparent; 
+        color:  #0c8c70; 
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid  #0c8c70; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.2s ease-in-out; 
+    }
+    #prevBtn {
+        top: 20px;
+    }
+    #nextBtn {
+        top: 70px;
+    }
+    .nav-button:hover {
+        background-color: #E6F4F1; 
+        transform: scale(1.05);
+    }
+
+  
+        .fasilitas-wrapper {
+            width: 100%;
+            background: white; 
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+
+        .container-fasilitas {
+            max-width: 1200px;
+            margin: 0 auto; 
+            background: transparent; 
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .fasilitas-header-top {
+            color:  #0c8c70; 
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .fasilitas-header-main {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 50px;
+        }
+        .fasilitas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .fasilitas-item {
+            width: 100%;
+            max-width: 250px; 
+            padding: 10px;
+            
+        }
+        .fasilitas-icon-box {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            background-color:    #0c8c70;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+        .fasilitas-icon-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .fasilitas-desc {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .icon-cutlery::after { content: "🍴"; }
+        .icon-passport::after { content: "🛂"; }
+        .icon-bag::after { content: "💼"; }
+        .icon-clock::after { content: "⏱️"; }
+    </style>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;  background:  #E6F4F1;">
+
+    <div style="max-width: 1200px; margin: 15px auto; padding: 30px; background-color: transparent;">
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 50px;">
+
+            <div style="width: 100%; max-width: 450px;">
+                <div style=" height: 320px; position: relative; "> 
+                    
+                    <div id="image-slider-container" style="width: 100%; height: 100%;">
+
+                        <div class="image-slide active">
+                            <img src="assets/slide-1.png" alt="Gambar Slide 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div class="image-slide">
+                            <img src="assets/slide2.jpg" alt="Gambar Slide 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <div class="image-slide">
+                            <img src="assets/slide3.jpg" alt="Gambar Slide 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div style="width: 50%; flex-grow: 1; padding-top: 20px; position: relative;">
+                
+                <h2 style="font-size: 2.5em; color: #333; margin-top: 0; ">
+                    Mengapa Memilih Kami?
+                </h2>
+
+                <button class="nav-button" id="prevBtn" aria-label="Previous Slide">▲</button>
+                <button class="nav-button" id="nextBtn" aria-label="Next Slide">▼</button>
+
+                <div class="slider-container">
+
+                    <div class="slide active">
+                        <p class="slide-item slide-top" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 20px;">
+                            Fokus Syar'i (Akomodasi). Kami menjamin pengalaman perjalanan yang tenang, aman, dan sesuai syariat Islam. Kami menyediakan akomodasi yang ramah Muslim/Muslimah dan memastikan setiap detail menjaga kekhusyuan ibadah Anda.
+                        </p>
+                        <p class="slide-item slide-bottom" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 40px;">
+                            Ketenangan Terjamin. Jadwal salat selalu terjaga tepat waktu, dan semua makanan selama perjalanan adalah Halal terverifikasi. Kami menghilangkan kekhawatiran logistik, sehingga fokus Anda sepenuhnya pada ibadah dan eksplorasi destinasi.
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <p class="slide-item slide-top" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 20px;">
+                            Layanan Premium & Profesional. Semua paket wisata kami dilengkapi dengan pendampingan Tour Leader Muslim/Muslimah berpengalaman yang menguasai rute dan kebutuhan syar'i.
+                        </p>
+                        <p class="slide-item slide-bottom" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 40px;">
+                            Itinerary Efisien. Kami merancang jadwal perjalanan yang tidak hanya mengunjungi destinasi utama, tetapi juga memberi waktu yang cukup untuk beristirahat dan beribadah. Kami pastikan Anda mendapat kualitas terbaik tanpa biaya tersembunyi.
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <p class="slide-item slide-top" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 20px;">
+                            Solusi Perjalanan Total. Kami mengurus semua detail teknis dan logistik, mulai dari visa, transportasi eksklusif, hingga tiket masuk objek wisata. Anda hanya perlu menyiapkan diri untuk menikmati perjalanan.
+                        </p>
+                        <p class="slide-item slide-bottom" style="color: #444; font-size: 1.1em; line-height: 1.7; margin-bottom: 40px;">
+                            Pengalaman yang Bermakna. Bersama Hksyari Trip, Anda mendapatkan lebih dari sekadar liburan; ini adalah perjalanan spiritual dan eksplorasi budaya yang mendalam. Kami ciptakan momen tak terlupakan dengan tenang dan nyaman sesuai kaidah Islam.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const imageSlides = document.querySelectorAll('.image-slide'); 
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        let slideInterval;
+        const intervalTime = 7000; 
+        function showSlide(index) {
+            if (index >= slides.length) {
+                index = 0; 
+            } else if (index < 0) {
+                index = slides.length - 1; 
+            }
+
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            imageSlides.forEach(imageSlide => imageSlide.classList.remove('active'));
+            
+           
+            slides[index].classList.add('active');
+            imageSlides[index].classList.add('active'); 
+            
+            currentSlide = index;
+        }
+
+   
+        function startAutoSlide() {
+            clearInterval(slideInterval); 
+            slideInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, intervalTime);
+        }
+
+ 
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+            startAutoSlide(); 
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+            startAutoSlide(); 
+        }
+
+    
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+     
+        showSlide(currentSlide);
+        startAutoSlide();
+    </script>
+
+<div class="fasilitas-wrapper">
+    <div class="container-fasilitas">
+
+        <div class="fasilitas-header-top">
+            FASILITAS MUSLIMERS
+        </div>
+        <div class="fasilitas-header-main">
+            Fasilitas Unggulan Hksyari Trip
+        </div>
+
+        <div class="fasilitas-grid">
+            
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon-box" style="content: '🍴';">
+                    <span class="icon-cutlery"></span>
+                </div>
+                <div class="fasilitas-icon-text">
+                    Konsumsi Halal
+                </div>
+                <div class="fasilitas-desc">
+                    Jaminan makanan Halal terverifikasi dari awal perjalanan sampai kembali ke tanah air.
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon-box" style="content: '⏱️';">
+                    <span class="icon-clock"></span>
+                </div>
+                <div class="fasilitas-icon-text">
+                    Jadwal Ibadah Terjaga
+                </div>
+                <div class="fasilitas-desc">
+                    Penyesuaian itinerary perjalanan dengan waktu salat dan fasilitas tempat salat.
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon-box" style="content: '🛂';">
+                    <span class="icon-passport"></span>
+                </div>
+                <div class="fasilitas-icon-text">
+                    Pengurusan Visa
+                </div>
+                <div class="fasilitas-desc">
+                    Pengurusan dokumen dan visa yang cepat dan mudah untuk kelancaran perjalanan Anda.
+                </div>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon-box" style="content: '💼';">
+                    <span class="icon-bag"></span>
+                </div>
+                <div class="fasilitas-icon-text">
+                    Tour Leader Syar'i
+                </div>
+                <div class="fasilitas-desc">
+                    Pendampingan oleh Tour Leader Muslim/Muslimah yang profesional dan berpengalaman.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

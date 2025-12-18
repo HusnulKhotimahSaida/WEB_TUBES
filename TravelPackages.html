@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Perjalanan | Hksyari Trip</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        
+        
+        
+        .bg-syari-section {
+            background-color: #E6F4F1; 
+            width: 100%;
+            padding-top: 50px;    
+            padding-bottom: 70px;
+        }
+
+       
+        .custom-container {
+            max-width: 1600px; 
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 150px; 
+            padding-right: 150px;
+        }
+
+      
+
+       .aspect-square {
+            aspect-ratio: 4 / 3; 
+            height: 100%; 
+        }
+
+        .aspect-rect {
+            aspect-ratio: 8 / 3;
+            height: 100%; 
+        }
+
+        .destination-card {
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: box-shadow 0.3s ease;
+            position: relative; 
+        }
+
+        .destination-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .destination-card img {
+            height: 100%;
+            width: 100%; 
+            object-fit: cover;
+            filter: brightness(70%);
+            transition: transform 0.8s ease, filter 0.8s ease;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.20);
+            filter: brightness(50%);  
+        }
+      
+        .caption-h2 {
+            font-size: 18px;
+            font-weight: 200;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #555;
+        }
+
+  
+        @media (max-width: 992px) {
+            .custom-container {
+                padding-left: 20px; 
+                padding-right: 20px;
+            }
+            
+            .aspect-rect {
+                aspect-ratio: 16 / 9; 
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="bg-syari-section">
+        
+        <div class="container-fluid custom-container">
+            
+            <h2 class="text-center mb-4" style="font-size: 2.5em; font-weight: bold; color: #333;">Travel Packages<br>
+             <span style="font-size:22px; color:#475569; font-weight:500;">
+            باقات السفر
+            </span>
+            </h2>
+            
+            <h2 class="text-center mb-5 caption-h2">
+                <b>Saksikan keagungan ciptaan Allah dalam beragam destinasi menakjubkan di seluruh dunia. Rasakan pesona setiap musim sebagai bukti kebesaran-Nya di setiap langkah perjalanan Anda yang penuh makna bersama #HksyariTrip!</b>
+            </h2>
+            
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-8 col-md-12">
+                    <a href="user_sejarah.php" class="text-decoration-none" target="_blank">
+                        <div class="card bg-dark text-white destination-card aspect-rect"> 
+                            <img src="assets/toursejarah.webp" class="card-img" alt="Tour Sejarah Islam">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                                <h5 class="card-title fw-bold fs-4 mb-1">Tour Sejarah Islam</h5>
+                                <p class="card-text text-white-50">Trip ke Jejak Rasul & Sahabat</p>
+                            </div>
+                        </div>
+                     </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="user_haji.php" class="text-decoration-none" target="_blank">
+                        <div class="card bg-dark text-white destination-card aspect-square"> 
+                            <img src="assets/haji.jpg" class="card-img" alt="Ibadah Haji Khusus">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                                <h5 class="card-title fw-bold fs-4 mb-1">Haji Khusus</h5>
+                                <p class="card-text text-white-50">Lihat Paket Haji Resmi</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="user_internasional.php" class="text-decoration-none" target="_blank">
+                        <div class="card bg-dark text-white destination-card aspect-square"> 
+                            <img src="assets/inter.jpg" class="card-img" alt="Wisata Halal Internasional">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                                <h5 class="card-title fw-bold fs-4 mb-1">Wisata Halal Internasional</h5>
+                                <p class="card-text text-white-50">150+ Trip Luar Negeri</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="user_domestik.php" class="text-decoration-none" target="_blank">
+                        <div class="card bg-dark text-white destination-card aspect-square">
+                            <img src="assets/indo.jpg" class="card-img" alt="Wisata Halal Domestik">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                                <h5 class="card-title fw-bold fs-4 mb-1">Wisata Halal Domestik</h5>
+                                <p class="card-text text-white-50">Jelajah Nusantara Halal</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <a href="user_umrah.php" class="text-decoration-none" target="_blank">
+                        <div class="card bg-dark text-white destination-card aspect-square"> 
+                            <img src="assets/Umrohh.jpg" class="card-img" alt="Umrah">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                                <h5 class="card-title fw-bold fs-4 mb-1 text-white">Umrah</h5>
+                                <p class="card-text text-white-50">Lihat 50+ Paket Ibadah</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div> </div> </section> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
